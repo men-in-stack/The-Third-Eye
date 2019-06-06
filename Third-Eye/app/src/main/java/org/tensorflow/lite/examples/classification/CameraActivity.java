@@ -29,6 +29,7 @@ import android.media.Image;
 import android.media.Image.Plane;
 import android.media.ImageReader;
 import android.media.ImageReader.OnImageAvailableListener;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -47,6 +48,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -102,6 +104,8 @@ public abstract class CameraActivity extends AppCompatActivity
   private Model model = Model.QUANTIZED;
   private Device device = Device.CPU;
   private int numThreads = -1;
+
+
 
   @Override
   protected void onCreate(final Bundle savedInstanceState) {
@@ -519,49 +523,115 @@ public abstract class CameraActivity extends AppCompatActivity
 
   @UiThread
   protected void showResultsInBottomSheet(List<Recognition> results) {
+
+
+
+
+
+
+
     if (results != null && results.size() >= 3) {
       Recognition recognition = results.get(0);
       if (recognition != null) {
         if (recognition.getTitle() != null){
+
           // the final result will be displayed from here.
           String s1=recognition.getTitle();
           if(s1.equals("100_new_back") || s1.equals("100_new_front") ||s1.equals("100_old_back") ||s1.equals("100_old_back") )
           {
             FinalView.setText("₹100");
+            final MediaPlayer mp100 = MediaPlayer.create(this,R.raw.a100);
+            TextView tv = findViewById(R.id.Final);
+            tv.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+               mp100.start();
+              }
+            });
+
+
 
           }
           else if(s1.equals("10_new_back") || s1.equals("10_new_front") ||s1.equals("10_old_back") ||s1.equals("10_old_back") )
           {
             FinalView.setText("₹10");
+            final MediaPlayer mp10 = MediaPlayer.create(this,R.raw.a10);
+            TextView tv = findViewById(R.id.Final);
+            tv.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                mp10.start();
+              }
+            });
 
           }
           else if(s1.equals("2000_back") ||s1.equals("2000_front"))
           {
             FinalView.setText("₹2000");
+            TextView tv = findViewById(R.id.Final);
+            final MediaPlayer mp2000 = MediaPlayer.create(this,R.raw.a2000);
+
+            tv.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                mp2000.start();
+              }
+            });
 
           }
           else if(s1.equals("200_back") ||s1.equals("200_front"))
           {
             FinalView.setText("₹200");
+            TextView tv = findViewById(R.id.Final);
+            final MediaPlayer mp200 = MediaPlayer.create(this,R.raw.a200);
+            tv.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                mp200.start();
+              }
+            });
 
           }
           else if(s1.equals("20_old_back") ||s1.equals("20_old_front" ))
           {
             FinalView.setText("₹20");
+            TextView tv = findViewById(R.id.Final);
+            final MediaPlayer mp20 = MediaPlayer.create(this,R.raw.a20);
+            tv.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                mp20.start();
+              }
+            });
 
           }
           else if(s1.equals("500_new_back") ||s1.equals("500_new_front"))
           {
             FinalView.setText("₹500");
             ///# RIP 500 old :-P
+            TextView tv = findViewById(R.id.Final);
+            final MediaPlayer mp500 = MediaPlayer.create(this,R.raw.a500);
+            tv.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                mp500.start();
+              }
+            });
           }
           else if(s1.equals("50_new_back") || s1.equals("50_new_front") ||s1.equals("50_old_back") ||s1.equals("50_old_back") )
           {
             FinalView.setText("₹50");
+            TextView tv = findViewById(R.id.Final);
+            final MediaPlayer mp50 = MediaPlayer.create(this,R.raw.a50);
+            tv.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                mp50.start();
+              }
+            });
 
           }
          // FinalView.setText(recognition.getTitle());
-
 
           //recognitionTextView.setText(recognition.getTitle());}
 

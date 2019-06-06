@@ -37,7 +37,4 @@ Third-Eye is made using following tools:
  - Add information Activity. 
 ### License:
 MIT
-#### NOTE:
-Audio feature is not yet added to the files. It will be commited soon.
-
 ### End of small projects can be the start of something big.!

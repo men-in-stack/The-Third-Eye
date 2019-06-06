@@ -26,21 +26,6 @@
         android:orientation="vertical">
 
 
-        <TextView
-            android:id="@+id/Final"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="3dp"
-            android:layout_marginBottom="38dp"
-            android:alpha="1"
-            android:gravity="center"
-            android:text="Starting..."
-            android:textColor="#3E1E6D"
-            android:textSize="50sp"
-            android:textStyle="bold" />
-
         <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/container"
@@ -57,7 +42,22 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentTop="true"
-            android:background="@color/semi_transparent"/>
+            android:alpha="0"
+            android:background="@color/semi_transparent" />
+
+        <TextView
+            android:id="@+id/Final"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="7dp"
+            android:alpha="1"
+            android:gravity="center"
+            android:text="Starting..."
+            android:textColor="#ffffff"
+            android:textSize="70sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

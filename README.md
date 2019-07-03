@@ -12,6 +12,9 @@ This application is targeted to Visually impaired or old people who have difficu
   - Easy User Interface.
   - Optimized and lag free.
 
+## Google play:
+https://lnkd.in/f2c6Auy
+
 ## Screenshots:
 <img src="Screenshots/s1.png" width="100">    <img src="Screenshots/s2.png" width="100">    <img src="Screenshots/s3.png" width="100">
 
